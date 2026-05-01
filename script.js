@@ -111,7 +111,7 @@ setInterval(() => {
 function verificarDesbloqueo() {
     const ahora = new Date();
     // 5 representa Junio (0-11)
-    const fechaSorpresa = new Date(2026, 5, 7); 
+    const fechaSorpresa = new Date(2026, 5, 6); 
     
     const contenedor = document.getElementById('seccion-sorpresa');
     const contenido = document.getElementById('contenido-sorpresa');
