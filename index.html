@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Invitación de Laila 🧜‍♀️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ocean-bg"></div>
+    <div id="bubble-container"></div>
+
+    <div class="envelope-wrapper" onclick="abrirSobre(this)">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="magic-seal">🫧</div> 
+            <div class="front"></div>
+            
+            <div class="letter">
+                <div class="carta-contenido">
+                    
+                    <!-- Carrusel de Fotos -->
+                    <div class="photo-carousel-container">
+                        <!-- Botones actualizados con 'event' para que el JS detecte el clic manual -->
+                        <button class="carousel-btn btn-prev" onclick="event.stopPropagation(); moverCarrusel(-1, event)">❮</button>
+                        <button class="carousel-btn btn-next" onclick="event.stopPropagation(); moverCarrusel(1, event)">❯</button>
+                        
+                        <div class="photo-carousel" id="carousel-track">
+                            <div class="polaroid-item"><img src="media/1.jpeg" alt="Laila 1"><div class="decor estrella-polaroid">⭐</div></div>
+                            <div class="polaroid-item"><img src="media/2.jpeg" alt="Laila 2" loading="lazy"><div class="decor burbujas-polaroid">🫧</div></div>
+                            <div class="polaroid-item"><img src="media/3.jpeg" alt="Laila 3" loading="lazy"><div class="decor concha-polaroid">🐚</div></div>
+                            <div class="polaroid-item"><img src="media/4.jpeg" alt="Laila 4" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/5.jpeg" alt="Laila 5" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/6.jpeg" alt="Laila 6" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/7.jpeg" alt="Laila 7" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/8.jpeg" alt="Laila 8" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/9.jpeg" alt="Laila 9" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/10.jpeg" alt="Laila 10" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/11.jpeg" alt="Laila 11" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/12.jpeg" alt="Laila 12" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/13.jpeg" alt="Laila 13" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/14.jpeg" alt="Laila 14" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/15.jpeg" alt="Laila 15" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/16.jpeg" alt="Laila 16" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/17.jpeg" alt="Laila 17" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/18.jpeg" alt="Laila 18" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/19.jpeg" alt="Laila 19" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/20.jpeg" alt="Laila 20" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/21.jpeg" alt="Laila 21" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/22.jpeg" alt="Laila 22" loading="lazy"></div>
+                            <div class="polaroid-item"><img src="media/23.jpeg" alt="Laila 23" loading="lazy"></div>
+                        </div>
+                    </div>
+
+                    <h1>¡Te invito a mi fiesta!</h1>
+                    <div class="texto-largo">
+                        <p>¡Parece que fue ayer cuando una pequeña sirenita llegó para llenarlo todo de color! 🌊</p>
+                        <p>Han pasado <strong>4 años</strong> de magia y ahora te invito a sumergirte en una aventura inolvidable.</p>
+                        <p>Habrá tesoros, juegos y mucha diversión en mi reino marino.</p>
+                        <p>¡Acompáñame a soplar mis 4 velitas, <strong>Laila</strong> te espera!</p>
+                    </div>
+
+                    <!-- Sección Sorpresa -->
+                    <div id="seccion-sorpresa" class="bloqueado">
+                        <div id="contenido-sorpresa">
+                            <div class="cofre-icon">🎁</div>
+                            <p>Hay una sorpresa preparada...</p>
+                            <div class="badge-fecha">Disponible el 07 de Junio</div>
+                        </div>
+                    </div> 
+
+                    <!-- Contador -->
+                    <div id="countdown">
+                        <div class="time-box"><span id="days">00</span><p>Días</p></div>
+                        <div class="time-box"><span id="hours">00</span><p>Hrs</p></div>
+                        <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+                        <div class="time-box"><span id="seconds">00</span><p>Seg</p></div>
+                    </div>
+
+                    <div class="cita">
+                        📅 Domingo 14 de Junio <br>
+                        🕒 11:00 AM
+                    </div>
+
+                    <!-- Información de Ubicación -->
+                    <div class="info-ubicacion">
+                        <div class="dato-direccion">
+                            <strong>📍 Ubicación:</strong><br>
+                            Calle 2 con Vereda 2, La Municipal (vía Camas Lara).
+                        </div>
+                        
+                        <div class="instrucciones-llegada">
+                            <strong>🚗 Cómo llegar:</strong><br>
+                            Al estar en Camas Lara, subes 2 cuadras y cruzas a la derecha en la segunda. A cuadra y media verás la casa, un poco antes de la Iglesia MCM.
+                        </div>
+                    </div>
+
+                    <!-- Botón de Mapa -->
+                    <a href="https://www.google.com/maps/dir//10.045012,-69.3997269" target="_blank" class="map-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Ver Ubicación en Mapa
+                    </a>
+                    
+                    <img src="media/image-removebg-preview (13).png" alt="Ariel" class="ariel-imagen">
+                </div>
+            </div>
+        </div>
+
+        <!-- MOVIDO: Fuera del sobre para que sea visible y tenga z-index propio -->
+        <p class="tap-instruction">Toca para abrir ✨</p>
+    </div>
+
+    <audio id="miMusica" src="media/musica.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
